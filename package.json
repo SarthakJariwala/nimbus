@@ -2,8 +2,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "TAILWIND_MODE=watch vite",
-    "build": "TAILWIND_MODE=build vite build"
+    "dev": "node scripts/dev.mjs",
+    "dev:vite": "TAILWIND_MODE=watch vite",
+    "dev:tailwind": "npx --yes @tailwindcss/cli -i frontend/css/tailwind.css -o frontend/css/output.css --watch",
+    "build": "npm run build:tailwind && npm run build:vite",
+    "build:tailwind": "npx --yes @tailwindcss/cli -i frontend/css/tailwind.css -o frontend/css/output.css --minify",
+    "build:vite": "TAILWIND_MODE=build vite build"
   },
   "overrides": {
     "vite": {
