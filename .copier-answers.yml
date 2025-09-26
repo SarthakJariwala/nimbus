@@ -1,0 +1,11 @@
+# Changes here will be overwritten by Copier
+_commit: v0.17.0
+_src_path: gh:SarthakJariwala/django-vite-inertia
+allauth: true
+database: postgresql
+docker_dev: true
+docker_prod: true
+frontend: svelte
+project_name: nimbus
+tailwind_css: true
+
